@@ -1,7 +1,9 @@
 # 100daysofML
 
 ## References: 
-* http://scikit-learn.org/stable/_static/ml_map.png
+![picture alt](http://scikit-learn.org/stable/_static/ml_map.png)
+
+----
 
 ### Day 1: KNN ###
 * Finding the distance between the test point to all train points, and choose the majority from K nearest neighbour.
