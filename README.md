@@ -1,3 +1,3 @@
-## 100daysofML
+# 100daysofML
 
-# Day1: KNN
+## Day1: KNN
