@@ -19,3 +19,12 @@ Linear regression
 Feature Selection
 * We mainly use feature selection techinques to get insights about the features and their relative importance with the target variable.The idea is to keep most relevant but not redundant feature for predictive model that can yield optimal accuracy.
 * source code: https://www.kaggle.com/vamshavardhanreddy/feature-selection	
+
+### Day 3: 
+Decision Trees
+* Cost functions:
+	* Regression : Mean squared error
+	* Classification : GINI
+* concept explanation: https://github.com/vamsha/100daysofML/blob/master/Decision_tree
+* Source code: https://www.kaggle.com/vamshavardhanreddy/decision-tree-implementation-using-pandas
+
