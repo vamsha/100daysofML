@@ -22,6 +22,13 @@ Feature Selection
 
 ### Day 3: 
 Decision Trees
+* Entropy: 
+	* Dictionary meaning of entropy pertaining to data is lack of order or predictability with data; In other words, data with the high disorder can be said to be data with high entropy, and, homogenous (or pure) data can be termed as data with very low entropy. Entropy can, thus, be defined as a measure of impurity of data. Higher the entropy, higher impure the data is.
+* Information Gain: 
+	* Information gain is the difference between the entropy of a data segment before the split and after the split. The high difference represents high information gain. Higher the difference implies the lower entropy of all data segments resulting from the split. Thus, higher the difference, higher the information gain and better the feature used for the split. Mathematically, the information gain, I, can be represented as following:
+	* InfoGain = E(S1) - E(S2)
+	* E(S1) represents the entropy of data belonging to the node before split
+	* E(S2) represents the weighted summation of the entropy of children nodes; Weights equal to the proportion of data instance falling in specific children node.	
 * Cost functions:
 	* Regression : Mean squared error
 	* Classification : GINI
