@@ -1,0 +1,26 @@
+Binning: 
+	Binning or Discretization is the process of transforming numerical variables into categorical counter parts. An example is to bin values for age  into categories such as 20-39,40-59,60-79. Numerical variables are usually discretized in the modeling methods based on frequency table (decision tree). moreover binning may improve accuracy of the predictive models by reducing the noise or non-linearity. Finally, binning allows identification of outliers, invalid and missing values of numerical variables.
+
+Overfitting:
+
+	Pre-pruning: 
+		Early stopping.
+		1. maxdepth: This parameter is used to set the maximum depth of a tree. Depth is the length of the longest path from a Root node to a Leaf node. Setting this parameter will stop growing the tree when the depth is equal the value set for maxdepth.
+		2. minsplit: It is the minimum number of records that must exist in a node for a split to happen or be attempted. For example, we set minimum records in a split to be 5; then, a node can be further split for achieving purity when the number of records in each split node is more than 5.
+		3. minbucket: It is the minimum number of records that can be present in a Terminal node. For example, we set the minimum records in a node to 5, meaning that every Terminal/Leaf node should have at least five records. We should also take care of not overfitting the model by specifying this parameter. If it is set to a too-small value, like 1, we may run the risk of overfitting our model.
+
+	post-pruning:
+		allows the tree to perfectly classify the training set, and than post prune the tree.
+	Practically, the second approach of post-pruning overfit trees is more successful because it is not easy to precisely estimate when to stop growing the tree. 		
+	The important step of tree pruning is to define a criterion be used to determine the correct final tree size using one of the following methods:		
+		1. Use a distinct dataset from the training set (called validation set), to evaluate the effect of post-pruning nodes from the tree.
+		2. Build the tree by using the training set, then apply a statistical test to estimate whether pruning or expanding a particular node is likely to produce an improvement beyond the training set.
+			* error estimation
+			* Significance testing (e.g., Chi-square test)
+		3. Minimum Description Length principle : Use an explicit measure of the complexity for encoding the training set and the decision tree, stopping growth of the tree when this encoding size (size(tree) + size(misclassifications(tree)) is minimized.
+		
+Reference:
+	https://dzone.com/articles/decision-trees-and-pruning-in-r
+	https://towardsdatascience.com/decision-trees-in-machine-learning-641b9c4e8052
+	https://machinelearningmastery.com/implement-decision-tree-algorithm-scratch-python/
+	
