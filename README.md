@@ -30,3 +30,7 @@
 #### Random Forest
 * Concept explanation : https://github.com/vamsha/100daysofML/blob/master/Decision_tree
 * Source Code: https://www.kaggle.com/vamshavardhanreddy/randomforest
+
+#### Ensemble Learning
+* Concept explanation : https://github.com/vamsha/100daysofML/blob/master/Ensemble%20Learning
+* Source Code: https://www.kaggle.com/vamshavardhanreddy/ensemble-learning
