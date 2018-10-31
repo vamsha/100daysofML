@@ -27,6 +27,11 @@
 * Source code: https://www.kaggle.com/vamshavardhanreddy/decision-tree-implementation-using-pandas
 
 ### Day 4:
+* Participated in https://www.kaggle.com/c/titanic kaggle competition.
+* preprocessing the data is the primary task.
+* Applied Decision tree and Random forest algorithms.
+
+### Day 5:
 #### Random Forest
 * Concept explanation : https://github.com/vamsha/100daysofML/blob/master/Decision_tree
 * Source Code: https://www.kaggle.com/vamshavardhanreddy/randomforest
