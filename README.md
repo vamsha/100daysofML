@@ -26,3 +26,11 @@
 * concept explanation: https://github.com/vamsha/100daysofML/blob/master/Decision_tree
 * Source code: https://www.kaggle.com/vamshavardhanreddy/decision-tree-implementation-using-pandas
 
+### Day 4:
+#### Random Forest
+* Random forest builds multiple decision trees and merges them together to get a more accurate and stable prediction.
+* Ensemble methods (Bagging) is a machine learning technique that combines several base models in order to produce one optimal predictive model.
+* References: https://towardsdatascience.com/the-random-forest-algorithm-d457d499ffcd 
+	      https://towardsdatascience.com/ensemble-methods-in-machine-learning-what-are-they-and-why-use-them-68ec3f9fef5f
+	      https://www.kaggle.com/niklasdonges/end-to-end-project-with-python
+	      
