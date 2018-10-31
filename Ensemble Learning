@@ -1,0 +1,82 @@
+**************************************************
+Ensemble Learning
+**************************************************
+You will have a large bias with simple trees and a large variance with complex trees.
+
+The main principle behind the ensemble model is that a group of weak learners come together to form a strong learner. 
+i.e. :  A collection of several models working together on a single set is called an Ensemble.
+
+The training stage is parallel for Bagging (i.e., each model is built independently), Boosting builds the new learner in a 
+sequential way.
+
+Random Patches samples both the training Instances as well as the Features. i.e. : bootstrap_features = True, max_samples = 0.6
+Random Subspaces keeps all the instances but samples features. i.e. : Bootstrap = True, bootstrap_features = True, max_features = 0.6
+
+1. Bagging:
+	The bootstrap=True parameter specifies the use of Bagging. 
+	e.g: 
+		from sklearn.ensemble import BaggingClassifier
+		from sklearn.tree import DecisionTreeClassifier
+		
+		bag_clf = BaggingClassifier(
+			DecisionTreeClassifier(random_state=42), n_estimators=500,
+			max_samples=100, bootstrap=True, n_jobs=-1, random_state=42)
+		bag_clf.fit(X_train, y_train)
+		
+		y_pred = bag_clf.predict(X_test)
+	
+	Out-of-Bag Evaluation:
+		oob_score = True
+		
+			bag_clf = BaggingClassifier(
+				DecisionTreeClassifier(random_state=42), n_estimators=500,
+				max_samples=100, bootstrap=True, n_jobs=-1, random_state=42,
+				oob_score = True) 
+			
+2. Boosting:
+		In simple terms, Run a Classifier and make predictions. Run another classifier to fit the previously misclassified instances and 
+    make predictions. Repeat until all/most of the training instances are fitted.
+		
+	AdaBoost:
+		from sklearn.ensemble import AdaBoostClassifier
+	
+			ada_clf = AdaBoostClassifier(
+				DecisionTreeClassifier(max_depth=1), n_estimators=200,
+				algorithm="SAMME.R", learning_rate=0.5, random_state=42)
+			ada_clf.fit(X_train, y_train)
+      
+		Scikit-learn uses a multiclass version of Adaboost called SAMME (Stagewise Additive Modelling using a Multiclass Exponential 
+    Loss Function). If the predictor can calculate probabilities (have predict_proba() method), Scikit Learn uses SAMME.R (R for Real) 
+    which relies on probabilities and in less prone to overfitting.
+	
+	Gradient Boosting:
+		Fit a model to the given Training set. Calculate the Residual Errors which become the new training instances. 
+    A new model is trained on these and so on. An addition of all the models is selected for making predictions.
+		
+		Code:
+			from sklearn.ensemble import GradientBoostingRegressor
+			gbrt = GradientBoostingRegressor(max_depth=2, n_estimators=3, learning_rate=1.0, random_state=42)
+			gbrt.fit(X, y)
+		
+		Learning rate parameter shrinks the contribution of each tree. There is a trade-off between learning_rate and n_estimators. 
+    Lowering the value of learning_rate increases the number of trees in the ensemble. This is called Shrinkage. 
+    Be vary that increasing the number of estimators to a large value may overfit the model. See Early Stopping. 
+    The trade-off must be carefully monitored.
+		
+	XGBoost:
+		XGBoost is a recent, most preferred and powerful gradient boosting method. Instead of making hard Yes and No Decision at the 
+    Leaf Nodes, XGBoost assigns positive and negative values to every decision made. All Trees are weak learners and provide a 
+    decisions slightly better than a random guess. But collectively averaged out, XGBoost performs really well.
+	
+		Code:
+			from xgboost import XGBClassifier
+			xgb_clf = XGBClassifier()
+			xgb_clf.fit(X, y)
+
+3. Stacking : 
+	This is a very interesting way of combining models. Here we use a learner to combine output from different learners. 
+  This can lead to decrease in either bias or variance error depending on the combining learner we use.
+	
+References: 
+	https://quantdare.com/what-is-the-difference-between-bagging-and-boosting/
+	https://towardsdatascience.com/ensemble-learning-in-machine-learning-getting-started-4ed85eb38e00
