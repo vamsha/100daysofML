@@ -1,0 +1,32 @@
+1. Random forest builds multiple decision trees and merges them together to get a more accurate and stable prediction.
+2. Ensemble methods (Bagging) is a machine learning technique that combines several base models in order to produce one optimal 
+predictive model.
+
+3. Increasing the Predictive Power
+
+Firstly, there is the „n_estimators“ hyperparameter, which is just the number of trees the algorithm builds before taking the maximum 
+voting or taking averages of predictions. In general, a higher number of trees increases the performance and makes the predictions more 
+stable, but it also slows down the computation.
+
+Another important hyperparameter is „max_features“, which is the maximum number of features Random Forest is allowed to try in an 
+individual tree. Sklearn provides several options, described in their documentation.
+
+The last important hyper-parameter we will talk about in terms of speed, is „min_sample_leaf “. This determines, like its name already 
+says, the minimum number of leafs that are required to split an internal node.
+
+4. Increasing the Models Speed
+
+The „n_jobs“ hyperparameter tells the engine how many processors it is allowed to use. If it has a value of 1, it can only use one 
+processor. A value of “-1” means that there is no limit.
+
+„random_state“ makes the model’s output replicable. The model will always produce the same results when it has a definite value of 
+random_state and if it has been given the same hyperparameters and the same training data.
+
+Lastly, there is the „oob_score“ (also called oob sampling), which is a random forest cross validation method. In this sampling, about 
+one-third of the data is not used to train the model and can be used to evaluate its performance. These samples are called the out of bag 
+samples. It is very similar to the leave-one-out cross-validation method, but almost no additional computational burden goes along with it.	
+
+References: 
+https://towardsdatascience.com/the-random-forest-algorithm-d457d499ffcd 
+https://towardsdatascience.com/ensemble-methods-in-machine-learning-what-are-they-and-why-use-them-68ec3f9fef5f 
+https://www.kaggle.com/niklasdonges/end-to-end-project-with-python
