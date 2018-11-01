@@ -3,6 +3,9 @@ Entropy:
 	In other words, data with the high disorder can be said to be data with high entropy, and, homogenous (or pure) data 
 	can be termed as data with very low entropy. Entropy can, thus, be defined as a measure of impurity of data. 
 	Higher the entropy, higher impure the data is.
+	
+	entropy = -p log(p)-q log(q)
+	
 Information Gain:
 	Information gain is the difference between the entropy of a data segment before the split and after the split. 
 	The high difference represents high information gain. Higher the difference implies the lower entropy of all data 
