@@ -1,0 +1,52 @@
+*****************************************************************
+*Formulas
+*****************************************************************
+
+Mean:
+	Average of the values.
+	
+Variance
+	The average of the squared differences from the Mean.
+
+Standard Deviation
+	The Standard Deviation is a measure of how spread out numbers are.
+	Its symbol is σ (the greek letter sigma)
+	
+The heights (at the shoulders) are: 600mm, 470mm, 170mm, 430mm and 300mm.
+Mean	=	 600 + 470 + 170 + 430 + 3005 
+		=	 1970/5 
+		=	394	
+		
+Variance
+σ2	=	 2062 + 762 + (−224)2 + 362 + (−94)25 
+ 	=	 42436 + 5776 + 50176 + 1296 + 88365 
+ 	=	 1085205 
+ 	=	21704
+
+Standard Deviation
+σ	=	√21704
+ 	=	147.32...
+ 	=	147 (to the nearest mm)
+	
+Co-variance:
+			   n
+	Cov(x,y) = E (x-mean(x)) (y-mean(y))  / (n-1)
+			   i=1						  
+
+No of co-variance values: 
+	
+		(n!) / (n-2)! * 2
+		
+Power rule:
+	f(x) = x^n
+		 = n (x ^ n-1)
+		 
+Chain Rule:
+		y = x^2
+		x = z^2
+		
+		dy	  dy   dx
+		-- =  -- * --
+		dz	  dx    dz
+		   
+		   = 2x * 2z
