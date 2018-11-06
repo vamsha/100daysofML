@@ -1,0 +1,28 @@
+Gradient Descent:
+  It is a optimization strategy, it is used while training your model, can be combined with any algorithm.
+	It is simply used to find the values of a functions parameters (coefficients) that minimize a cost function as far as possible.
+
+What is a Gradient?
+	“A gradient measures how much the output of a function changes if you change the inputs a little bit.”  -- Lex Fridman (MIT)
+	More mathematically, a gradient is a partial derivative with respect to its inputs.
+
+Importance of the Learning Rate
+	How big the steps are that Gradient Descent takes into the direction of the local minimum are determined by the so-called learning rate.
+  
+Types of Gradient Descent
+	1. Batch Gradient Descent:
+		Batch Gradient Descent, also called vanilla gradient descent, calculates the error for each example within the training dataset, 
+    but only after all training examples have been evaluated, the model gets updated. This whole process is like a cycle and called a 
+    training epoch.
+	2. Stochastic Gradient Descent
+		Stochastic gradient descent (SGD) in contrary, does this for each training example within the dataset. This means that it updates 
+    the parameters for each training example, one by one. 
+	3. Mini Batch Gradient Descent
+		Mini-batch Gradient Descent is the go-to method since it’s a combination of the concepts of SGD and Batch Gradient Descent. 
+    It simply splits the training dataset into small batches and performs an update for each of these batches. Therefore it creates a 
+    balance between the robustness of stochastic gradient descent and the efficiency of batch gradient descent.
+
+References:
+	https://towardsdatascience.com/gradient-descent-in-a-nutshell-eaf8c18212f0
+	http://ruder.io/optimizing-gradient-descent/index.html#conclusion
+	https://www.hackerearth.com/blog/machine-learning/3-types-gradient-descent-algorithms-small-large-data-sets/
