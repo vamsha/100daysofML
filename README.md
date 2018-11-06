@@ -48,4 +48,5 @@
 	https://www.kaggle.com/vamshavardhanreddy/mini-batch-gradient-descent
 	https://www.kaggle.com/vamshavardhanreddy/stochastic-gradient-descent
 	https://www.kaggle.com/vamshavardhanreddy/batch-gradient-descent
+	https://www.kaggle.com/vamshavardhanreddy/gradient-descent-local-minima
 
