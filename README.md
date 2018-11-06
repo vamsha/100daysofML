@@ -39,3 +39,13 @@
 #### Ensemble Learning
 * Concept explanation : https://github.com/vamsha/100daysofML/blob/master/Ensemble%20Learning
 * Source Code: https://www.kaggle.com/vamshavardhanreddy/ensemble-learning
+
+### Day 6:
+#### Gradient Descent
+* Concept explanation: https://github.com/vamsha/100daysofML/blob/master/Gradient%20Descent
+* Maths behind GD: https://www.youtube.com/watch?v=jc2IthslyzM&list=LLLyTovQpha5RMvWHI8JOB7g&index=12&t=2s (worth watching)
+* Source code:
+	https://www.kaggle.com/vamshavardhanreddy/mini-batch-gradient-descent
+	https://www.kaggle.com/vamshavardhanreddy/stochastic-gradient-descent
+	https://www.kaggle.com/vamshavardhanreddy/batch-gradient-descent
+
