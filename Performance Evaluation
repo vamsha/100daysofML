@@ -1,0 +1,62 @@
+True Positives (TP) - 
+  These are the correctly predicted positive values which means that the value of actual class is yes and the value of predicted class 
+  is also yes.
+
+True Negatives (TN) - 
+  These are the correctly predicted negative values which means that the value of actual class is no and value of predicted class is 
+  also no.
+
+False positives and false negatives, these values occur when your actual class contradicts with the predicted class.
+
+False Positives (FP) – 
+  When actual class is no and predicted class is yes.
+
+False Negatives (FN) – 
+  When actual class is yes but predicted class in no.
+
+Accuracy - 
+  Accuracy is the most intuitive performance measure and it is simply a ratio of correctly predicted observation to the total 
+  observations. One may think that, if we have high accuracy then our model is best. Yes, accuracy is a great measure but only when 
+  you have symmetric datasets where values of false positive and false negatives are almost same. Therefore, you have to look at other 
+  parameters to evaluate the performance of your model.
+
+Accuracy = TP+TN/TP+FP+FN+TN
+
+Precision - 
+  Precision is the ratio of correctly predicted positive observations to the total predicted positive observations. The question 
+  that this metric answer is of all passengers that labeled as survived, how many actually survived? High precision relates to the 
+  low false positive rate.
+
+Precision = TP/TP+FP
+
+Recall (Sensitivity) - 
+  Recall is the ratio of correctly predicted positive observations to the all observations in actual class - yes. The question recall 
+  answers is: Of all the passengers that truly survived, how many did we label? 
+
+Recall = TP/TP+FN
+
+F1 score - 
+  F1 Score is the weighted average of Precision and Recall. Therefore, this score takes both false positives and false negatives into 
+  account. Intuitively it is not as easy to understand as accuracy, but F1 is usually more useful than accuracy, especially if you have 
+  an uneven class distribution. Accuracy works best if false positives and false negatives have similar cost. If the cost of false 
+  positives and false negatives are very different, it’s better to look at both Precision and Recall.
+
+F1 Score = 2*(Recall * Precision) / (Recall + Precision)
+
+Receiver operating characteristic (ROC) curve: 
+  plots the true positive rate (TPR) versus the false positive rate (FPR) as a function of the model’s threshold for classifying a 
+  positive
+
+TPR = TP/TP+FN
+
+FPR = FP/FP+TN
+
+Area under the curve (AUC): 
+  metric to calculate the overall performance of a classification model based on area under the ROC curve
+  
+References:
+  https://towardsdatascience.com/beyond-accuracy-precision-and-recall-3da06bea9f6c
+  https://scikit-learn.org/stable/auto_examples/model_selection/plot_roc.html
+  https://blog.exsilio.com/all/accuracy-precision-recall-f1-score-interpretation-of-performance-measures/
+  https://medium.com/greyatom/lets-learn-about-auc-roc-curve-4a94b4d88152
+  
