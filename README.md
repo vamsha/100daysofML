@@ -50,3 +50,9 @@
 	https://www.kaggle.com/vamshavardhanreddy/batch-gradient-descent
 	https://www.kaggle.com/vamshavardhanreddy/gradient-descent-local-minima
 
+### Day 7:
+#### Performance Evaluation
+* Concept explanation:https://github.com/vamsha/100daysofML/blob/master/Performance%20Evaluation
+* Source code: https://www.kaggle.com/vamshavardhanreddy/performance-metrics
+
+
