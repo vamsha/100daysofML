@@ -1,0 +1,27 @@
+PCA is a useful statistical technique for finding patterns in data of high dimension. once you have found these patterns in the data, 
+and you compress the data, ie. by reducing the number of dimensions, without much loss of information. This technique used in image 
+compression.
+	
+	Step 1: Get some data and Standardize features by removing the mean and scaling to unit variance. i.e. X_std
+	Step 2: Calculate the covariance matrix
+				i.e. mean_vec = np.mean(X_std, axis=0)
+				cov_mat = (X_std - mean_vec).T.dot((X_std - mean_vec)) / (X_std.shape[0]-1)
+	Step 3: Calculate the eigenvectors and eigenvalues of the covariance matrix
+				i.e. eig_vals, eig_vecs = np.linalg.eig(cov_mat)
+	Step 4: Choosing components and forming a feature vector
+				i.e. feature_vector = np.hstack((eig_pairs[0][1].reshape(4,1), 
+												 eig_pairs[1][1].reshape(4,1) ))
+	Step 5: Deriving the new data set
+				i.e. final_data = X_std.dot(feature_vector)
+
+	Mean, Variance and Standard Deviation are the measures of the spread of the data.
+	Covariance is always measured between 2 dimensions. If you calculate the covariance between one dimension and itself, you get the 
+  variance.
+	covariance value can be calculated between any 2 dimensions in a data set, this technique is often used to find relationships between 
+  dimensions in high-dimensional data sets where visualization is difficult
+
+	RawOriginalData = (FeatureVector.T * FinalData) + OriginalMean
+	
+References:
+	http://www.cs.otago.ac.nz/cosc453/student_tutorials/principal_components.pdf
+	https://www.kaggle.com/nirajvermafcb/principal-component-analysis-explained
