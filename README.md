@@ -55,4 +55,9 @@
 * Concept explanation:https://github.com/vamsha/100daysofML/blob/master/Performance%20Evaluation
 * Source code: https://www.kaggle.com/vamshavardhanreddy/performance-metrics
 
+### Day 8:
+#### PCA
+* Concept explanation:https://github.com/vamsha/100daysofML/blob/master/PCA
+* Source code: https://www.kaggle.com/vamshavardhanreddy/pca-principal-component-analysis
+
 
