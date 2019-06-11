@@ -61,3 +61,7 @@
 * Source code: https://www.kaggle.com/vamshavardhanreddy/pca-principal-component-analysis
 
 
+### Day 9:
+### Accuracy Metrics
+https://www.mikulskibartosz.name/precision-vs-recall-explanation/
+https://towardsdatascience.com/metrics-to-evaluate-your-machine-learning-algorithm-f10ba6e38234
